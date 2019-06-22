@@ -11,7 +11,7 @@ use SalmonDE\CalculationCommands\Commands\SubtractCommand;
 
 class Loader extends PluginBase {
 
-    public function onEnable(): void{
+    protected function onEnable(): void{
         $this->getServer()->getCommandMap()->registerAll('CalculationCommands', [
             new AddCommand($this),
             new DivideCommand($this),
