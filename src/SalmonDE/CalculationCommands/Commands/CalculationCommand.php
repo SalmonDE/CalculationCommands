@@ -10,8 +10,7 @@ use SalmonDE\CalculationCommands\Loader;
 abstract class CalculationCommand extends PluginCommand implements CommandExecutor {
 
     public function __construct(string $cmdName, Loader $plugin){
-        parent::__construct($cmdName, $plugin);
-        $this->setExecutor($this);
+        parent::__construct($cmdName, $plugin, $this);
     }
 
     final protected function parseParams(array &$params): void{
