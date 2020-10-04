@@ -4,7 +4,6 @@ declare(strict_types = 1);
 namespace SalmonDE\CalculationCommands\Commands;
 
 use pocketmine\command\CommandSender;
-use pocketmine\command\Command;
 use SalmonDE\CalculationCommands\Loader;
 
 class AddCommand extends CalculationCommand {
@@ -17,7 +16,7 @@ class AddCommand extends CalculationCommand {
         $this->setUsage('/add number1 number2 [...]');
     }
 
-    public function onCommand(CommandSender $sender, Command $cmd, string $label, array $params): bool{
+    public function onCommand(CommandSender $sender, string $label, array $params): bool{
         $this->parseParams($params);
 
         if(count($params) < 2){
